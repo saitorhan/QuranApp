@@ -120,7 +120,7 @@ namespace QuranApp.WindowsApp.Forms
             Properties.Settings.Default.LastMinPage = pagemin;
             Properties.Settings.Default.Save();
 
-            labelControlCuzRight.Text = "Cüz " + (pagemin%20 == 0 ? (pagemin / 20) : (pagemin / 20 + 1));
+            labelControlCuzRight.Text = "Cüz " + (pagemin % 20 == 0 ? (pagemin / 20) : (pagemin / 20 + 1));
             labelControlCuzLeft.Text = "Cüz " + ((pagemax / 20) + 1);
         }
     }
