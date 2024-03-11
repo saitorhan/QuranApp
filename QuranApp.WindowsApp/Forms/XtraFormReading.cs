@@ -108,9 +108,8 @@ namespace QuranApp.WindowsApp.Forms
 
         private void SetPage()
         {
-            string path = Properties.Settings.Default.FilesPath;
-            string rightPage = Path.Combine(path, "Arabic", pagemin + ".png");
-            string leftPage = Path.Combine(path, "Arabic", pagemax + ".png");
+            string rightPage = Path.Combine(GlobalVariables.ArabicImages, pagemin + ".png");
+            string leftPage = Path.Combine(GlobalVariables.ArabicImages, pagemax + ".png");
 
             pictureEditRightPage.Image = Image.FromFile(rightPage);
             textEditRight.Text = pagemin.ToString();

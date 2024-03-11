@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QuranApp.WindowsApp.Forms;
 
 namespace QuranApp.WindowsApp
 {
@@ -14,6 +15,13 @@ namespace QuranApp.WindowsApp
         public Form1()
         {
             InitializeComponent();
+        }
+
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            XtraFormDownLoadFiles xtraFormDownLoadFiles = new XtraFormDownLoadFiles();
+            xtraFormDownLoadFiles.ShowDialog();
         }
     }
 }

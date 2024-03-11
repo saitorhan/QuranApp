@@ -25,18 +25,6 @@ namespace QuranApp.WindowsApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\D Disk\\Pictures\\Kuran")]
-        public string FilesPath {
-            get {
-                return ((string)(this["FilesPath"]));
-            }
-            set {
-                this["FilesPath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int LastMinPage {
             get {

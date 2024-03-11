@@ -22,7 +22,7 @@ namespace QuranApp.WindowsApp
 
             CreateDirectories();
 
-            Application.Run(new XtraFormReading());
+            Application.Run(new Form1());
         }
 
         private static void CreateDirectories()
@@ -31,6 +31,18 @@ namespace QuranApp.WindowsApp
             if (!System.IO.Directory.Exists(GlobalVariables.Layouts))
             {
                 System.IO.Directory.CreateDirectory(GlobalVariables.Layouts);
+            }
+
+            // create files directory if not exists on app startup
+            if (!System.IO.Directory.Exists(GlobalVariables.Files))
+            {
+                System.IO.Directory.CreateDirectory(GlobalVariables.Files);
+            }
+
+            // create arabic images directory if not exists on app startup
+            if (!System.IO.Directory.Exists(GlobalVariables.ArabicImages))
+            {
+                System.IO.Directory.CreateDirectory(GlobalVariables.ArabicImages);
             }
         }
     }
