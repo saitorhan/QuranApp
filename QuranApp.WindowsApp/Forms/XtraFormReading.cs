@@ -30,7 +30,11 @@ namespace QuranApp.WindowsApp.Forms
                 int page;
                 string s = buttonEditGotoPage.EditValue?.ToString();
                 if (!Int32.TryParse(s, out page)) return;
-
+                if (page < 0 || page > 604)
+                {
+                    XtraMessageBox.Show("Geçersiz sayfa numarası", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (page % 2 == 0)
                 {
@@ -78,6 +82,30 @@ namespace QuranApp.WindowsApp.Forms
             }
         }
 
+        private void buttonEditGotoCuz_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int cuz;
+            string s = buttonEditGotoCuz.EditValue?.ToString();
+            if (!Int32.TryParse(s, out cuz)) return;
+
+            if (cuz <= 0 || cuz > 30)
+            {
+                XtraMessageBox.Show("Geçersiz cüz numarası", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            pagemin = (cuz - 1) * 20 + 1;
+
+            if (pagemin == 1)
+            {
+                pagemin -= 1;
+            }
+
+            pagemax = pagemin + 1;
+
+            SetPage();
+        }
+
         private void SetPage()
         {
             string path = Properties.Settings.Default.FilesPath;
@@ -91,6 +119,9 @@ namespace QuranApp.WindowsApp.Forms
 
             Properties.Settings.Default.LastMinPage = pagemin;
             Properties.Settings.Default.Save();
+
+            labelControlCuzRight.Text = "Cüz " + (pagemin%20 == 0 ? (pagemin / 20) : (pagemin / 20 + 1));
+            labelControlCuzLeft.Text = "Cüz " + ((pagemax / 20) + 1);
         }
     }
 }

@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -43,6 +38,16 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
@@ -51,6 +56,11 @@
             this.pictureEditRightPage = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEditLeftPage = new DevExpress.XtraEditors.PictureEdit();
             this.buttonEditGotoPage = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEditGotoCuz = new DevExpress.XtraEditors.ButtonEdit();
+            this.panelControlLeft = new DevExpress.XtraEditors.PanelControl();
+            this.panelControlRight = new DevExpress.XtraEditors.PanelControl();
+            this.labelControlCuzLeft = new DevExpress.XtraEditors.LabelControl();
+            this.labelControlCuzRight = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -64,6 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditRightPage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditLeftPage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditGotoPage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGotoCuz.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlLeft)).BeginInit();
+            this.panelControlLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlRight)).BeginInit();
+            this.panelControlRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -71,10 +86,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.textEditLeft, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textEditRight, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureEditRightPage, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureEditLeftPage, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelControlLeft, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelControlRight, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -86,6 +101,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.buttonEditGotoCuz);
             this.panelControl1.Controls.Add(this.buttonEditGotoPage);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
@@ -113,7 +129,7 @@
             // 
             // textEditLeft
             // 
-            this.textEditLeft.Location = new System.Drawing.Point(3, 3);
+            this.textEditLeft.Location = new System.Drawing.Point(5, 0);
             this.textEditLeft.Name = "textEditLeft";
             this.textEditLeft.Properties.ReadOnly = true;
             this.textEditLeft.Size = new System.Drawing.Size(100, 20);
@@ -121,7 +137,7 @@
             // 
             // textEditRight
             // 
-            this.textEditRight.Location = new System.Drawing.Point(465, 3);
+            this.textEditRight.Location = new System.Drawing.Point(0, 0);
             this.textEditRight.Name = "textEditRight";
             this.textEditRight.Properties.ReadOnly = true;
             this.textEditRight.Size = new System.Drawing.Size(100, 20);
@@ -151,19 +167,67 @@
             // 
             this.buttonEditGotoPage.Location = new System.Drawing.Point(360, 39);
             this.buttonEditGotoPage.Name = "buttonEditGotoPage";
-            editorButtonImageOptions1.Image = global::QuranApp.WindowsApp.Properties.Resources.right;
-            editorButtonImageOptions1.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            editorButtonImageOptions2.Image = global::QuranApp.WindowsApp.Properties.Resources.backward_16x16;
+            editorButtonImageOptions2.Image = global::QuranApp.WindowsApp.Properties.Resources.right;
             editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            editorButtonImageOptions3.Image = global::QuranApp.WindowsApp.Properties.Resources.forward_16x16;
+            editorButtonImageOptions3.Image = global::QuranApp.WindowsApp.Properties.Resources.backward_16x16;
             editorButtonImageOptions3.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            editorButtonImageOptions4.Image = global::QuranApp.WindowsApp.Properties.Resources.forward_16x16;
+            editorButtonImageOptions4.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.buttonEditGotoPage.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sayfaya Git", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Önceki", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sonraki", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sayfaya Git", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Önceki", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sonraki", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.buttonEditGotoPage.Size = new System.Drawing.Size(240, 24);
             this.buttonEditGotoPage.TabIndex = 1;
             this.buttonEditGotoPage.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditGotoPage_ButtonClick);
+            // 
+            // buttonEditGotoCuz
+            // 
+            this.buttonEditGotoCuz.Location = new System.Drawing.Point(360, 13);
+            this.buttonEditGotoCuz.Name = "buttonEditGotoCuz";
+            editorButtonImageOptions1.Image = global::QuranApp.WindowsApp.Properties.Resources.right;
+            editorButtonImageOptions1.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.buttonEditGotoCuz.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Cüze Git", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.buttonEditGotoCuz.Size = new System.Drawing.Size(100, 24);
+            this.buttonEditGotoCuz.TabIndex = 2;
+            this.buttonEditGotoCuz.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditGotoCuz_ButtonClick);
+            // 
+            // panelControlLeft
+            // 
+            this.panelControlLeft.Controls.Add(this.labelControlCuzLeft);
+            this.panelControlLeft.Controls.Add(this.textEditLeft);
+            this.panelControlLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControlLeft.Location = new System.Drawing.Point(3, 3);
+            this.panelControlLeft.Name = "panelControlLeft";
+            this.panelControlLeft.Size = new System.Drawing.Size(456, 24);
+            this.panelControlLeft.TabIndex = 2;
+            // 
+            // panelControlRight
+            // 
+            this.panelControlRight.Controls.Add(this.labelControlCuzRight);
+            this.panelControlRight.Controls.Add(this.textEditRight);
+            this.panelControlRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControlRight.Location = new System.Drawing.Point(465, 3);
+            this.panelControlRight.Name = "panelControlRight";
+            this.panelControlRight.Size = new System.Drawing.Size(457, 24);
+            this.panelControlRight.TabIndex = 3;
+            // 
+            // labelControlCuzLeft
+            // 
+            this.labelControlCuzLeft.Location = new System.Drawing.Point(111, 6);
+            this.labelControlCuzLeft.Name = "labelControlCuzLeft";
+            this.labelControlCuzLeft.Size = new System.Drawing.Size(63, 13);
+            this.labelControlCuzLeft.TabIndex = 1;
+            this.labelControlCuzLeft.Text = "labelControl1";
+            // 
+            // labelControlCuzRight
+            // 
+            this.labelControlCuzRight.Location = new System.Drawing.Point(106, 3);
+            this.labelControlCuzRight.Name = "labelControlCuzRight";
+            this.labelControlCuzRight.Size = new System.Drawing.Size(63, 13);
+            this.labelControlCuzRight.TabIndex = 1;
+            this.labelControlCuzRight.Text = "labelControl1";
             // 
             // XtraFormReading
             // 
@@ -190,6 +254,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditRightPage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEditLeftPage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEditGotoPage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEditGotoCuz.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlLeft)).EndInit();
+            this.panelControlLeft.ResumeLayout(false);
+            this.panelControlLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlRight)).EndInit();
+            this.panelControlRight.ResumeLayout(false);
+            this.panelControlRight.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -203,5 +274,10 @@
         private DevExpress.XtraEditors.TextEdit textEditLeft;
         private DevExpress.XtraEditors.ButtonEdit buttonEditGotoPage;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl;
+        private DevExpress.XtraEditors.ButtonEdit buttonEditGotoCuz;
+        private DevExpress.XtraEditors.PanelControl panelControlLeft;
+        private DevExpress.XtraEditors.LabelControl labelControlCuzLeft;
+        private DevExpress.XtraEditors.PanelControl panelControlRight;
+        private DevExpress.XtraEditors.LabelControl labelControlCuzRight;
     }
 }
