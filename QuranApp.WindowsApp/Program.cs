@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using QuranApp.WindowsApp.Forms;
 
 namespace QuranApp.WindowsApp
 {
@@ -18,7 +19,19 @@ namespace QuranApp.WindowsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            CreateDirectories();
+
+            Application.Run(new XtraFormReading());
+        }
+
+        private static void CreateDirectories()
+        {
+            // create layout directory if not exists on app startup
+            if (!System.IO.Directory.Exists(GlobalVariables.Layouts))
+            {
+                System.IO.Directory.CreateDirectory(GlobalVariables.Layouts);
+            }
         }
     }
 }
