@@ -35,27 +35,24 @@ namespace QuranApp.WindowsApp.Forms
 
             try
             {
-                WebClient client = new WebClient();
 
-                
-
-                for (int i = 0; i < 604; i++)
+                Parallel.For(0, 605, i =>
                 {
                     string url = GlobalVariables.ArabicFilesRootUrl + i + ".png";
                     string file = GlobalVariables.ArabicImages + "\\" + i + ".png";
                     if (!File.Exists(file))
                     {
-                        client.DownloadFile(url, file);
+                        using (WebClient client = new WebClient())
+                        {
+                            
+                            client.DownloadFile(url, file);
+                        }
 
                     }
+                });
 
+                XtraMessageBox.Show("Dosyalar indirildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    progressBarControl1.PerformStep();
-                    LanguagelabelControl.Text = String.Format("Arapça sayfalar indiriliyor. ({0}/{1})", i,
-                        progressBarControl1.Properties.Maximum);
-                    Application.DoEvents();
-                }
-                client.Dispose();
             }
             catch (Exception exception)
             {

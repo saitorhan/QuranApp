@@ -10,6 +10,6 @@ namespace QuranApp.WindowsApp
 
         public static string ArabicImages => Path.Combine(Files, "Arabic");
 
-        public static string ArabicFilesRootUrl => "https://github.com/saitorhan/QuranApp/blob/master/Files/Arabic/";
+        public static string ArabicFilesRootUrl => "https://raw.githubusercontent.com/saitorhan/QuranApp/master/Files/Arabic/";
     }
 }
